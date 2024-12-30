@@ -26,6 +26,13 @@
         /* window.document.getElementById('msg').innerText = "Estou aguardando" */
         var d = window.document.querySelector('div.msg')
         d.style.color = 'blue'
+        if (corpo.nodeType == Node.ELEMENT_NODE) {
+            window.alert("É um nó de elemento")
+        } else {
+            if (corpo.nodeType == Node.TEXT_NODE ) {
+                window.alert("É um nó de texto")
+            }
+        }
     </script>
 </body>
 </html>

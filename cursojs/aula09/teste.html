@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de arvore DOM</title>
+    <script>
+        function testandoArvoreDOM() {
+            var element = document.documentElement.lastChild;
+            alert("Eu sou o nodo" + element.nodeName);
+
+            var outroElemento = document.getElementsByTagName('h1')[0];
+            alert("Eu sou o nodo " + outroElemento.nodeValue);
+
+            var filho = outroElemento.firstChild;
+            alert("Eu sou o nodo " + filho.nodeValue);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Teste de Titulo</h1>
+    <p>Você conhece sobre árvores DOM? Se não conhece aprenda em <a href=“www.devmedia.com.br”>www.devmedia.com.br</a> e seja o mais novo entendido sobre o assunto.
+    </p>
+    <span onclick="testandoArvoreDOM();">Clique aqui para Testar o Acesso a Árvore DOM</span>
+</body>
+
+</html>
