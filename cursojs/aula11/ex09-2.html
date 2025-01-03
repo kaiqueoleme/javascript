@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nacionalidade</title>
+  </head>
+  <body>
+    <h2>Digite de qual país você mora:</h2>
+    <input type="text" name="txtn" id="txtn" />
+    <button onclick="identificar()">Enviar</button>
+    <div id="res"></div>
+
+    <script>
+      function identificar() {
+        var pais = document.querySelector("input#txtn");
+        var res = document.querySelector("div#res");
+        res.innerHTML = `<p>Você está vivendo em <strong>${pais.value}</strong></p>`;
+        if (pais.value != "Brasil") {
+          res.innerHTML += "<p>Você é <strong>Estrangeiro</strong></p>";
+        } else {
+          res.innerHTML += "<p>Você é <strong>Brasileiro</strong></p>";
+        }
+      }
+    </script>
+  </body>
+</html>

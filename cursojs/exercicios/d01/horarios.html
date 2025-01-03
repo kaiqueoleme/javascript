@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horarios</title>
+    <style>
+      body {
+        margin: 0;
+        text-align: center;
+        background-color: #cebe90;
+      }
+
+      div.container {
+        height: 40vh;
+        width: 65vw;
+        background-color: white;
+        text-align: center;
+        margin: auto;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+      }
+
+      div h3 {
+        color: black;
+      }
+
+      img {
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 100%;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hora do Dia</h1>
+    <div class="container">
+      <h4 id="horario"></h4>
+      <img
+        width="250"
+        height="250"
+        src="img/dia.jpg"
+        alt="Imagem-do-horario"
+        id="myImg"
+      />
+    </div>
+
+    <script>
+      var agora = new Date();
+      var hora = agora.getHours();
+      var horario = document.getElementById("horario");
+      var imagem = document.getElementById("myImg");
+      horario.innerHTML = `Agora são ${hora} horas`;
+      if (hora < 15 && hora > 6) {
+        imagem.src = "img/dia.jpg";
+        document.body.style.backgroundColor = "#FED771";
+      } else if (hora <= 19 && hora > 12) {
+        imagem.src = "img/tarde.jpg";
+        document.body.style.backgroundColor = "#9C5318";
+      } else {
+        imagem.src = "img/noite.jpg";
+        document.body.style.backgroundColor = "#20435F";
+      }
+    </script>
+  </body>
+</html>

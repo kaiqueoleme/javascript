@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Idade</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #3b81d3;
+      }
+      h1 {
+        text-align: center;
+      }
+
+      div.container {
+        padding: 10px;
+        height: 50vh;
+        width: 65vw;
+        background-color: white;
+        line-height: 30px;
+        margin: auto;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+      }
+
+      div.centralizar {
+        text-align: center;
+      }
+
+      img {
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Verificador de idade</h1>
+    <div class="container">
+      Ano de Nascimento: <input type="number" name="txtano" id="txtano" />
+      <br />
+      Sexo: <input type="radio" name="txts" id="txts" value="man" />
+      <label for="txts">Masculino</label>
+      <input on type="radio" name="txts" id="txts" value="woman" />
+      <label for="txts">Feminino</label> <br />
+      <button onclick="verificar();">Verificar</button> <br />
+
+      <div class="centralizar">
+        <span id="pessoa">ada</span><br />
+        <img
+          width="250"
+          height="250"
+          src="img/dia.jpg"
+          alt="Imagem-de-uma-pessoa"
+          id="myImg"
+        />
+      </div>
+    </div>
+
+    <script>
+      function verificar() {
+        var dataAtual = new Date();
+        var ano = dataAtual.getFullYear();
+        var nasc = Number(document.getElementById("txtano")).value;
+        var sexo = document.querySelector('input[name="txts"]:checked').value;
+        
+      }
+    </script>
+  </body>
+</html>
