@@ -3,6 +3,7 @@ function calcular() {
   var end = document.getElementById("txtend");
   var step = document.getElementById("txtstep");
   var res = document.getElementById("res");
+  
   if (
     start.value.length == 0 ||
     end.value.length == 0 ||
@@ -17,30 +18,28 @@ function calcular() {
     step = 1;
   }
 
-  if (start.value < end.value) {
-    var s =  Number(start.value);
-    var e =  Number(end.value);
-    var st =  Number(step.value);
-    var cont = "";
+  if (Number(start.value) < Number(end.value)) {
+    var msg = "";
+    var c = Number(start.value);
+    do {
+      msg += `${c} &#128073; `;
 
-    for (c = s; c <= e; c += st) {
-      res.innerHTML = `${s}...`
-    }
+      c += Number(step.value);
+    } while (c <= end.value);
   }
-/*
-  if (start.value > end.value) {
-    var s =  Number(start.value);
-    var e =  Number(end.value);
-    var st =  Number(step.value);
-    var cont = "";
-
-    for (c = s; c >= e; c -= st) {
-      cont += `${c} &#128073; `;
-      res.innerHTML = `${cont} &#127937;`;
+    
+  
+  if (Number(start.value) > Number(end.value)) {
+    var msg = "";
+    var msg = "";
+    for (var c = Number(start.value); c >= end.value; c -= Number(step.value)) {
+      msg += `${c} &#128073; `;
     }
   }
 
   if (start.value == end.value) {
-    res.innerHTML = `${start.value}`;
-  } */
+    var msg = `${start.value}`;
+  }
+
+  res.innerHTML =  `${msg} &#127937;`
 }
