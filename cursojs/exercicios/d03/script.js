@@ -15,7 +15,7 @@ function calcular() {
 
   if (step.value == 0) {
     alert("Passo inválido! Considerando PASSO 1");
-    step = 1;
+    step.value = 1;
   }
 
   if (Number(start.value) < Number(end.value)) {
