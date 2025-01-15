@@ -15,12 +15,39 @@ section {
     width: 500px;
     margin: auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.37);
+    text-align: center;
 }
+
+
 
 footer {
     color: white;
     text-align: center;
     font-style: italic;
+}
+p#esquerda {
+    float: left;
+    width: 247px;
+}
+
+p#direita {
+    float: right;
+    width: 247px;
+}
+
+p input {
+    width: 15%;
+}
+
+div button {
+    width: 30%;
+    height: 40px;
+    border-radius: 10px;
+}
+
+div select {
+    width: 100%;
+    text-align: center;
 }
 
 div select{
